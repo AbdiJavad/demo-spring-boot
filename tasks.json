@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Spring Boot",
+      "type": "shell",
+      "command": "mvn spring-boot:run",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Test",
+      "type": "shell",
+      "command": "mvn -q -DskipTests=false test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Package (skip tests)",
+      "type": "shell",
+      "command": "mvn -q -DskipTests=true package",
+      "problemMatcher": []
+    }
+  ]
+}

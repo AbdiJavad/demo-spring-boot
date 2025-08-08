@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Demo Spring Boot API",
+    "_postman_id": "c3e1b8c2-1234-4abc-9eee-000000000001",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all persons",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/persons"
+      }
+    },
+    {
+      "name": "Create person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Charlie\",\"email\":\"charlie@example.com\"}"
+        },
+        "url": "{{baseUrl}}/api/persons"
+      }
+    },
+    {
+      "name": "Get one person",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/persons/1"
+      }
+    },
+    {
+      "name": "Update person",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Alice Updated\",\"email\":\"alice@newmail.com\"}"
+        },
+        "url": "{{baseUrl}}/api/persons/1"
+      }
+    },
+    {
+      "name": "Delete person",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/persons/1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "Spring Boot Demo API",
+    "_postman_id": "spring-boot-demo",
+    "description": "Postman collection for Spring Boot Demo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Persons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/persons",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "persons"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/persons",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "persons"
+          ]
+        }
+      }
+    }
+  ]
+}

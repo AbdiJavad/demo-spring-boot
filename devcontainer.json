@@ -1,0 +1,48 @@
+{
+  "name": "Java 17 + Maven (Codespaces)",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers/features/maven:1": {
+      "version": "3.9.11"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [
+    8080,
+    5432
+  ],
+  "portsAttributes": {
+    "8080": {
+      "label": "Spring Boot"
+    },
+    "5432": {
+      "label": "PostgreSQL (optional)"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "redhat.vscode-yaml",
+        "github.vscode-github-actions",
+        "mhutchie.git-graph"
+      ],
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/msopenjdk-17",
+            "default": true
+          }
+        ],
+        "files.eol": "\n",
+        "editor.tabSize": 2
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash scripts/setup.sh --codespaces"
+}
