@@ -15,4 +15,5 @@ jobs:
 
       - name: Build with Maven
         working-directory: demo-spring-boot
-        run: mvn -B -DskipTests=true package
+        run: mvn -f demo-spring-boot/pom.xml -B -DskipTests=true package
+
